@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>v-if</title>
+</head>
+<body>
+    <h1>V-if</h1>
+    <div id="app">
+        <span v-if="showFlag">{{msg}}</span>
+        <span v-else-if="second">我是固定的</span>
+        <span v-else>{{info}}</span>
+    </div>
+    <script type="text/javascript">
+        var app=new Vue({
+            el:'#app',
+            data:{
+                msg:'show me',
+                showFlag:false,
+                info:'hidden me',
+                second:false
+            }
+        })
+    </script>
+</body>
+</html>

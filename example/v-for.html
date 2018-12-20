@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>v-for</title>
+</head>
+<body>
+    <h1>v-for</h1>
+    <div id="app">
+        <ol>
+            <li v-for="item in itemList">{{item}}</li>
+        </ol>
+        <hr>
+        <ul>
+            <li v-for="(item,index) in itemList">{{index}} - {{item}}</li>
+        </ul>
+        <hr>
+        <ol>
+            <li v-for="item of itemList">{{item}}</li>
+        </ol>
+        <hr>
+        <ul>
+            <li v-for="stu in students">{{stu.code}} - {{stu.name}}</li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        var app=new Vue({
+            el:'#app',
+            data:{
+                itemList:['A','B','C','D'],
+                students:[
+                    {code:101,name:'aa'},
+                    {code:102,name:'bb'},
+                    {code:103,name:'cc'},
+                    {code:104,name:'dd'},
+                    {code:105,name:'ee'}
+                ]
+            }
+        })
+    </script>
+</body>
+</html>
